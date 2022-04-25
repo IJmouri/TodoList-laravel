@@ -17,7 +17,7 @@ trait AuthenticatesUsers
      */
     public function showLoginForm()
     {
-        return view('admin.login.login');
+        return view('master.login.login');
     }
 
     /**
@@ -159,7 +159,7 @@ trait AuthenticatesUsers
 
         $request->session()->invalidate();
 
-        return $this->loggedOut($request) ?: redirect('/home');
+        return $this->loggedOut($request) ?: redirect('/');
     }
 
     /**

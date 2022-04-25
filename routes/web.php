@@ -11,14 +11,8 @@
 |
 */
 
-
-
-Route::get('/',[
-	'uses' => 'TodoController@index',
-	'as' => 'home'
-]);
 Route::get('/todo/add', [
-	'uses' =>'TodoController@add',
+	'uses' =>'TodoController@addView',
 	'as'   => 'add-task'
 ]);
 
@@ -51,15 +45,21 @@ Route::post('/todo/update', [
 	'as'   => 'update-item'
 ]);
 
-
 Route::get('/item/deleteitem/{id}', [
 	'uses' =>'TodoController@deleteitem',
 	'as'   => 'delete-item'
 ]);
+
 Route::get('/history', [
 	'uses' =>'TodoController@history',
 	'as'   => 'history-item'
 ]);
+
+Route::get('/item/HistoryClear', [
+	'uses' =>'TodoController@ClearHistory',
+	'as'   => 'clear-history'
+]);
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'TodoController@index')->name('home');

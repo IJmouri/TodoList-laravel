@@ -1139,6 +1139,7 @@ class Router implements RegistrarContract, BindingRegistrar
     {
         return $this->currentRouteAction() == $action;
     }
+    
 
     /**
      * Register the typical authentication routes for an application.

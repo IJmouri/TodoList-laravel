@@ -15,7 +15,7 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigIncrements('user_id');
+            $table->unsignedinteger('user_id');
             $table->string('Task_Name',100);
             $table->date('Completion_Date');
             $table->tinyInteger('Completion_Status');

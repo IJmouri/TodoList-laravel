@@ -1,0 +1,71 @@
+
+  html, body, div, span, table, tbody, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, img, a, article, aside, canvas, details, embed, figure, figcaption, hgroup, menu, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* font: inherit; */
+    vertical-align: baseline;
+}
+.wrapper{
+    width: 100%;
+}
+
+.header{
+    height: 50px;
+    width: calc(100% - 0px);
+    background-color: blueviolet;
+    /* margin-left: 20px; */
+    position: relative;
+}
+.sidebar{
+    /*position: relative;*/
+    height: calc(100vh - 50px);
+    /* margin-left:20px; */
+    width: 270px;
+    background-color: blueviolet;
+    /*display: inline-block;*/
+}
+.title{
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: absolute;
+    padding: 10px;
+    font-size: 24px;
+}
+.sidebarlist{
+    list-style: none;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+.sidebarlist li{
+  
+    padding: 5px;
+   
+  
+}
+
+.panel{
+    width: calc(100% - 500px);
+    background: whitesmoke;
+    margin-left: 120px;
+    margin-top: 60px;
+    /* height: 100px; */
+    display: inline-block;
+    position: absolute;
+}
+.panel-heading{
+    color: white;
+    text-align: center;
+    /* width: 60px; */
+    background-color: blueviolet;
+    height: 60px;
+}
+
+.panel-heading h3{
+    line-height: 30px;
+}

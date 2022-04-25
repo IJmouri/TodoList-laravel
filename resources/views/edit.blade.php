@@ -1,4 +1,4 @@
-@extends('admin.master')
+@extends('master.master')
 @section('body')
 <br/>
 </!DOCTYPE html>

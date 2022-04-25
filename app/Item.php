@@ -3,7 +3,9 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 class Item extends Model
 {
     protected $fillable = ['Task_Name','Completion_Date','Completion_Status'];
@@ -12,9 +14,6 @@ class Item extends Model
     {
         return $this->belongsTo(User::class);
     }
-	public function scopeActive($query)
-    {
-        return $query->where('Completion_Status', 1);
-    }
+	
     
 }
